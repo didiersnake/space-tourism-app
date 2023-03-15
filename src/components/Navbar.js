@@ -10,23 +10,23 @@ const Navbar = () => {
         <img src={Logo} alt="logo" />
       </div>
       <ul className="link-list">
-        <li>
-          <Link className="link" to={"/"}>
+        <li className="link">
+          <Link className='l' to={"/"}>
             00 Home
           </Link>
         </li>
-        <li>
-          <Link className="link" to={"destination"}>
+        <li className="link">
+          <Link className='l'  to={"destination"}>
             01 Destination
           </Link>
         </li>
-        <li>
-          <Link className="link" to={"crew"}>
+        <li className="link">
+          <Link className='l' to={"crew"}>
             02 Crew
           </Link>
         </li>
-        <li>
-          <Link className="link" to={"technology"}>
+        <li className="link">
+          <Link className='l' to={"technology"}>
             03 Technology
           </Link>
         </li>

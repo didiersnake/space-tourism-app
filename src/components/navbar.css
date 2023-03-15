@@ -15,23 +15,43 @@
     font-size: large;
 }
 
-.nav > ul {
-    width: 700px;
-    background: transparent;
+.nav .link-list {
+    background-color: rgba(73, 80, 87, .25);
+    backdrop-filter: blur(20px);
+    height: 60px;
     display: flex;
     align-items: center;
-    padding: 0 60px;
-    justify-content: space-around;
+    padding: 10px 100px;
     
 }
 
-.nav .link-list {
-    background-color: rgba(73, 80, 87, .2);
-    backdrop-filter: blur(20px);
-    height: inherit;
+.link-list .link {
+    padding: 20px;
+    margin: 0 5px;
 }
 
-li .link {
+.link-list .link :after{
+    content: "";
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: azure;
+    transition: .3s;
+    bottom: 0px;
+}
+
+.link-list .link :hover{
+    opacity: .6;
+}
+
+.link-list .link :hover:after{
+    width: 100%;
+}
+
+.link-list .link .l{
     text-decoration: none;
     color: azure;
+    
 }
