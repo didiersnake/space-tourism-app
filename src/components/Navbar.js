@@ -9,28 +9,30 @@ const Navbar = () => {
       <div className="logo">
         <img src={Logo} alt="logo" />
       </div>
-      <ul className="link-list">
-        <li className="link">
+          <div className="link-list">
+              
+        <div className="link">
           <Link className='l' to={"/"}>
             00 Home
           </Link>
-        </li>
-        <li className="link">
+        </div>
+        
+        <div className="link">
           <Link className='l'  to={"destination"}>
             01 Destination
           </Link>
-        </li>
-        <li className="link">
+        </div>
+        <div className="link">
           <Link className='l' to={"crew"}>
             02 Crew
           </Link>
-        </li>
-        <li className="link">
+        </div>
+        <div className="link">
           <Link className='l' to={"technology"}>
             03 Technology
           </Link>
-        </li>
-      </ul>
+        </div>
+      </div>
     </nav>
   );
 }

@@ -21,16 +21,20 @@
     height: 60px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    gap: 15px;
     padding: 10px 100px;
-    
+    z-index: 1;
 }
 
-.link-list .link {
+.link-list .link .l {
     padding: 20px;
-    margin: 0 5px;
+    text-decoration: none;
+    color: white;
+    z-index: 2;
 }
 
-.link-list .link :after{
+.link-list .link::after{
     content: "";
     left: 0;
     right: 0;
@@ -42,16 +46,11 @@
     bottom: 0px;
 }
 
-.link-list .link :hover{
+.link-list .link:hover{
     opacity: .6;
 }
 
-.link-list .link :hover:after{
+.link-list .link:hover::after{
     width: 100%;
 }
 
-.link-list .link .l{
-    text-decoration: none;
-    color: azure;
-    
-}

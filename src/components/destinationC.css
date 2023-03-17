@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+}
+.container .num {
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    gap: 8px;
+    color: white;
+}
+
+.container .num > p{
+    opacity: .4;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
