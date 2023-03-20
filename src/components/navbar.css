@@ -31,26 +31,28 @@
     padding: 20px;
     text-decoration: none;
     color: white;
-    z-index: 2;
+
 }
 
-.link-list .link::after{
+.link-list .link .l::after{
     content: "";
     left: 0;
-    right: 0;
-    width: 0;
+    width: 100%;
     height: 3px;
     position: absolute;
-    background-color: azure;
-    transition: .3s;
-    bottom: 0px;
+    transform: scaleX(0);
+    background: azure;
+    transform-origin: bottom left;
+    transition: transform .3s ease-out;
+    bottom: -3px;
 }
 
-.link-list .link:hover{
+.link-list .link .l:hover{
     opacity: .6;
 }
 
 .link-list .link:hover::after{
     width: 100%;
+    transform: scaleX(1);
 }
 
