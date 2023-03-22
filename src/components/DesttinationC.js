@@ -1,9 +1,15 @@
 import React, { useState } from "react";
-import Planet from "../assets/destination/image-moon.png";
 import "./destinationC.css"
+import { useSelector } from "react-redux";
+import { selectAllData } from "./destSlice";
+
+
 function DesttinationC() {
   const [tab, setTab] = useState(1);
+    const data = useSelector(selectAllData)
+    const destData = data.destinations
 
+    
   const toggleTabs = (index) => {
     return setTab(index);
   };
@@ -15,62 +21,50 @@ function DesttinationC() {
 
       <div className="content">
         <div className="iamge-container">
-          <img src={Planet} alt="" />
+        {
+            destData.map((item, index) => {
+                return index + 1 === tab &&
+                    <img key={item.name} 
+                    src={require(`../assets/destination/${item.images["png"]}`)} alt="" />;
+            })
+        }
         </div>
 
         <div tab-container>
           <div className="tabs-block">
-            <button
-              className={tab === 1 ? "active-tab tab " : "tab"}
-              onClick={() => toggleTabs(1)}
-            >
-              Moon
-            </button>
-            <button
-              className={tab === 2 ? "active-tab tab " : "tab"}
-              onClick={() => toggleTabs(2)}
-            >
-              Mars
-            </button>
-            <button
-              className={tab === 3 ? "active-tab tab " : "tab"}
-              onClick={() => toggleTabs(3)}
-            >
-              Europa
-            </button>
-            <button
-              className={tab === 4 ? "active-tab tab " : "tab"}
-              onClick={() => toggleTabs(4)}
-            >
-              Titan
-            </button>
-          </div>
+            {destData.map((item, index) => {
+              return <button
+              className={ index + 1 === tab ? "active-tab tab " : "tab"}
+              onClick={() => toggleTabs(index + 1)}
+              >{item.name}</button>
+          })}
+        </div>
 
-          <div>
-            <div
-              className={
-                tab === 1 ? "tab-content active-content" : "tab-content"
-              }
-            >
-              <h1>Moon</h1>
-              <p>
-                See our planet as you’ve never seen it before. A perfect
-                relaxing trip away to help regain perspective and come back
-                refreshed. While you’re there, take in some history by visiting
-                the Luna 2 and Apollo 11 landing sites.
-              </p>
-              <div className="details">
-                <div>
-                  <p className="lil">Avg distance</p>
-                  <p>384,400 KM</p>
-                </div>
-                <div>
-                  <p className="lil">Est. Travel time</p>
-                  <p>3 Days</p>
-                </div>
-              </div>
+            <div>
+            {
+                destData.map((item, index)=> {
+                    return (
+                      index + 1 === tab && (
+                        <div className="tab-content" key={item.name}>
+                          <h1>{item.name}</h1>
+                          <p>{item.description}</p>
+                          <div className="details">
+                            <div>
+                              <p className="lil">Avg distance</p>
+                              <p>{item.distance}</p>
+                            </div>
+                            <div>
+                              <p className="lil">Est. Travel time</p>
+                              <p>{item.travel}</p>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    );
+                })
+            }
             </div>
-          </div>
+          
         </div>
       </div>
     </div>
