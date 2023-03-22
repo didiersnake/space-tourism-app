@@ -31,7 +31,9 @@
 .tab-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
+  width: auto;
+  height: inherit;
 }
 
 .tabs-block {
