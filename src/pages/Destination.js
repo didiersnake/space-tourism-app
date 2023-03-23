@@ -6,8 +6,10 @@ import "./destination.css"
 function Destination() {
     return (
       <div className="destination">
-        <Navbar />
-        <DesttinationC/>
+        <div>
+          <Navbar />
+          <DesttinationC />
+        </div>
       </div>
     );
 }

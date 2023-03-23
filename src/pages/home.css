@@ -2,7 +2,6 @@
 
 .home{
     z-index: -1;
-    padding-top: 20px;
     height: 100%;
     width: 100%;
     background: url(../assets/home/background-home-desktop.jpg);

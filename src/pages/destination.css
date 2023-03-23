@@ -1,3 +1,7 @@
 .destination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: url(../assets/destination/background-destination-desktop.jpg)
 }
+
