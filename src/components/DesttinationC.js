@@ -11,7 +11,8 @@ function DesttinationC() {
   const toggleTabs = (index) => {
       return setTab(index);
     };
-      
+     
+    //planet image
     const planet = destData.map((item, index) => {
       return (
         index + 1 === tab && (
@@ -24,6 +25,7 @@ function DesttinationC() {
       );
     });
 
+    //planet tabs
     const planetTabs = destData.map((item, index) => {
       return (
         <button

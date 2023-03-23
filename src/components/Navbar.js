@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Logo from "../assets/favicon-32x32.png";
 import "./navbar.css"
 
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <nav className="nav">
       <div className="logo">
@@ -18,17 +19,17 @@ const Navbar = () => {
         </div>
         
         <div className="link">
-          <Link className='l'  to={"destination"}>
+          <Link className='l'  to={"/destination"}>
             01 Destination
           </Link>
         </div>
         <div className="link">
-          <Link className='l' to={"crew"}>
+          <Link className='l' to={"/crew"}>
             02 Crew
           </Link>
         </div>
         <div className="link">
-          <Link className='l' to={"technology"}>
+          <Link className='l' to={"/technology"}>
             03 Technology
           </Link>
         </div>
