@@ -6,7 +6,7 @@
   padding: 100px 120px;
   justify-content: center;
 }
-
+/* To be sent in global styles  */
 .num {
   font-size: 1.5rem;
   font-weight: 600;
@@ -25,7 +25,7 @@
 .content {
   display: flex;
   gap: 140px;
-  align-items: start;
+  align-items: center;
 }
 
 .tab-container {
@@ -44,6 +44,8 @@
   margin-bottom: 30px;
 }
 
+
+/* tab hover and active effects */
 .tab {
   color: rgb(255, 255, 255);
   background: none;
@@ -75,23 +77,26 @@
     border-bottom: 2px solid #ffffff; 
 }
 
+/* content */
+
 .tab-content {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  color: antiquewhite;
 }
 
 .tab-content > h1 {
     font-size: 6rem;
     font-weight: 400;
     text-transform: uppercase;
+    color: rgb(255, 255, 255);
 }
 
 .tab-content > p {
     width: 80%;
     word-spacing: 3px;
     letter-spacing: 2px;
+    color: rgb(221, 221, 221);
 }
 
 
@@ -105,6 +110,7 @@
   text-transform: uppercase;
   letter-spacing: 3px;
   word-spacing: 2px;
+  color: rgb(255, 255, 255);
 }
 
 

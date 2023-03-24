@@ -5,11 +5,10 @@ import "slick-carousel/slick/slick-theme.css";
 import "./crewC.css";
 import { selectAllData } from "./destSlice";
 import { useSelector } from "react-redux";
-import { current } from "@reduxjs/toolkit";
 
 function CrewC() {
   const data = useSelector(selectAllData);
-  const [currentItem, setCurrentItem] = useState(1);
+  const [currentItem, setCurrentItem] = useState(0);
 
   const settings = {
     dots: true,
@@ -21,10 +20,11 @@ function CrewC() {
     afterChange: current => setCurrentItem(current)
   };
 
+  //get image 
   const image = data.crew.map((item, index) => {
     return (
       index === currentItem && (
-        <div>
+        <div className="img-container" key={item.name}>
           <img
             src={require(`../assets/crew/${item.images["png"]}`)}
             alt="imageT"
@@ -34,9 +34,10 @@ function CrewC() {
     );
   });
 
-  const sliderItem = data.crew.map((item, index) => {
+  //get data 
+  const sliderItem = data.crew.map((item) => {
     return (
-      <div key={item.name}>
+      <div className="slider-content" key={item.name}>
         <h3>{item.role}</h3>
         <h1>{item.name}</h1>
         <p>{item.bio}</p>
@@ -46,8 +47,15 @@ function CrewC() {
 
   return (
     <div className="crew-container">
-      <Slider {...settings}>{sliderItem}</Slider>
-      {image}
+      <div className="num">
+        <p>02 </p>Meet Your Crew
+      </div>
+      <div className="content">
+        <div className="slider">
+        <Slider {...settings}>{sliderItem}</Slider>
+        </div>
+        {image}
+      </div>
     </div>
   );
 }

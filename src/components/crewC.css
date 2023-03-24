@@ -1,11 +1,68 @@
+/* slick css */
 
-.crew-container{
-    height: auto;
-    width: inherit;
-    
+.slick-dots li.slick-active button::before {
+  color: rgb(255, 255, 255);
+}
+
+.slick-dots li button::before {
+  color: rgb(255, 255, 255);
+  font-size: .6rem;
+}
+
+.slick-dots{
+    text-align: left;
+}
+
+.slick-next::before, .slick-prev::before {
+  display: none;
+}
+
+/* body content */
+
+.crew-container {
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  padding: 100px 120px;
+  padding-bottom: 0;
+  justify-content: center;
 }
 
 .text {
-    color: aliceblue;
+  color: aliceblue;
 }
 
+.slider{
+    width: 40%;
+    justify-content: baseline;
+}
+
+.slider .slider-content{
+    color: rgb(255, 255, 255);
+    background: transparent;
+    padding-bottom: 20px;
+}
+
+.slider .slider-content h3{
+    opacity: .5;
+    text-transform: uppercase;
+    font-size: large;
+    padding: 0 2px;
+}
+
+.slider .slider-content h1{
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    padding: 5px 2px;
+}
+
+.slider .slider-content p{
+    color: rgb(221, 221, 221);
+}
+
+/* image styling */
+
+.img-container{
+    margin-top: -90px;
+}
