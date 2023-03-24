@@ -1,0 +1,8 @@
+.tech-container{
+  width: 100%;
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  padding: 100px 120px;
+  justify-content: center;   
+}
