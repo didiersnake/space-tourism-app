@@ -9,7 +9,7 @@ function DesttinationC() {
   const destData = data.destinations;
 
   const toggleTabs = (index) => {
-      return setTab(index);
+      return setTab(index + 1);
     };
      
     //planet image
@@ -31,7 +31,7 @@ function DesttinationC() {
         <button
           key={item.name}
           className={index + 1 === tab ? "active-tab tab " : "tab"}
-          onClick={() => toggleTabs(index + 1)}
+          onClick={() => toggleTabs(index)}
         >
           {item.name}
         </button>
