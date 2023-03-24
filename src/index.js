@@ -5,6 +5,9 @@ import App from './App';
 import {store} from "./app/store"
 import { Provider } from 'react-redux';
 import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { selectAllData } from './components/destSlice';
+//load data 
+store.getState(selectAllData)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

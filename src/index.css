@@ -10,5 +10,24 @@
   font-weight: 500;
 }
 
+/* global classes */
+.num {
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  margin-left: 0px;
+  gap: 8px;
+  color: white;
+}
 
+.num > p {
+  opacity: 0.4;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
 
+.content {
+  display: flex;
+  gap: 140px;
+  align-items: center;
+}
