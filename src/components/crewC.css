@@ -45,7 +45,7 @@
 }
 
 .slider .slider-content h3{
-    opacity: .5;
+    color: rgb(221, 221, 221);
     text-transform: uppercase;
     font-size: large;
     padding: 0 2px;
