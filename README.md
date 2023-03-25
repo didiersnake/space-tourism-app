@@ -25,8 +25,11 @@ Users should be able to:
 
 ### Screenshot
 
+#### Home
 ![Home](./space_1.PNG)
+#### Destination
 ![Destination](./space_2.PNG)
+#### Technology
 ![Technology](./space_3.PNG)
 
 ## My process
