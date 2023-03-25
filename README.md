@@ -53,7 +53,7 @@ Users should be able to:
 ## Author
 
 - Github - [didier_snake](github.com/didier_snake)
-- Twitter - [@yourusername](https://www.twitter.com/didier_snake)
+- Twitter - [@didier_snake](https://www.twitter.com/didier_snake)
 
 
 
